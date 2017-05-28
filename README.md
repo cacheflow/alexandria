@@ -8,12 +8,13 @@
 
 ## Installation
 
-Command-line usage
+### Command-line usage
+
 npm install -g alexandria
 
 alexandria "url"
 
-Module-usage:
+### Module-usage:
 
 Install the package with:
 
@@ -31,10 +32,8 @@ let alexandria = new Alexandria()
 summarizeAndRead(url, optional boolean)
 ```
 
-summarizeAndRead only requires a url. You can pass an optional boolean of true
-to it as a second parameter to have it print your summary to the console while it's
-being read. The boolean is primarily used internally for the CLI mode, so summaries
-can be shown while being read.
+only requires a url. You can pass an optional boolean of true
+to it as a second parameter to have it print your summary to the console while it's being read. When using alexandria from the command line the boolean is passed internally to allow printing to the console.
 
 # Example
 
