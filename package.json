@@ -1,10 +1,10 @@
 {
-  "name": "alexandria",
+  "name": "read-this",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "alexandria": "./cli.js"
+    "read-this": "./cli.js"
   },
   "keywords": [
     "summary",

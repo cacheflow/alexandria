@@ -5,15 +5,15 @@
 let program = require('commander')
 
 let VERSION = require('./package.json').version;
-let Alexandria = require('./index.js');
-let alex = new Alexandria()
+let ReadThis = require('./index.js');
+let readThis = new ReadThis()
 let printToConsole = true
 
 program
   .version('0.0.1')
   .arguments('<url>')
   .action(function (url) {
-    alex.summarizeAndRead(url, printToConsole)
+    readThis.summarizeAndRead(url, printToConsole)
 	})
 
 

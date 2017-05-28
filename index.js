@@ -2,27 +2,25 @@
 let summary = require('node-tldr');
 let say = require('say')
 
-class Alexandria {
+class ReadThis {
   constructor() {
     this._isCommandLine = false
   }
 
   getSummary (url) {
-    if ( this.isValidUrl(url) ) {
-      return new Promise ((resolve, reject) => {
-        summary.summarize(url, function(result, failure) {
-          if ( failure ) {
-            reject(result.error)
-          }
-          else {
-            resolve(result.summary.toString())
-          }
-        })
-      })
-    }
-    else {
-      throw new Error("Please pass a valid url like http://www.example.com/.")
-    }
+    return new Promise ((resolve, reject) => {
+      summary.summarize(url, ((result, failure) => {
+        if ( !this.isValidUrl(url) ) {
+          reject("Please pass a valid url like http://www.example.com/.")
+        }
+        else if ( failure ) {
+          reject(result.error)
+        }
+        else {
+          resolve(result.summary.toString())
+        }
+      }))
+    })
   }
 
   isValidUrl (url) {
@@ -42,8 +40,8 @@ class Alexandria {
   summarizeAndRead(url, bool) {
     this.getSummary(url)
     	.then(summary => this.readSummary(summary, bool))
-    		.catch(err => console.log(err))
+    		.catch(err => err)
   }
 }
 
-module.exports = Alexandria
+module.exports = ReadThis

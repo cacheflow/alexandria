@@ -1,6 +1,6 @@
-# Alexandria
+# Read This
 
-![Alexandria](library-of-alexandria.jpg)
+![ReadThis](library-of-alexandria.jpg)
 
 
 ## Overview
@@ -10,45 +10,45 @@ Summarizes and reads articles to you via the command line
 
 ### Command-line usage
 
-npm install -g alexandria
+npm install -g read-this
 
-alexandria "url"
+read-this "url"
 
 ### Module-usage:
 
-While alexandria is primarily a command line package, you can still use it as
+While read-this is primarily a command line package, you can still use it as
 a module.
 
 Install the package with:
 
 ```
-npm install --save alexandria
+npm install --save read-this
 ```
 ## How to use
 
 ```js
-let Alexandria = require('alexandria')
-let alexandria = new Alexandria()
+let ReadThis = require('read-this')
+let readThis = new ReadThis()
 ```
 
 ```js
-alexandria.summarizeAndRead(url, optional boolean)
+readThis.summarizeAndRead(url, optional boolean)
 ```
 
 summarizeAndRead only requires a url. You can pass an optional boolean of true
-to it as a second parameter to have it print your summary to the console while it's being read. When using alexandria from the command line the boolean is passed internally to allow printing to the console.
+to it as a second parameter to have it print your summary to the console while it's being read. When using read-this from the command line the boolean is passed internally to allow printing to the console.
 
 # Example
 
 ### Command-line:
 
-alexandria http://www.cnn.com/2017/02/07/us/harambe-cheeto-trnd/
+read-this http://www.cnn.com/2017/02/07/us/harambe-cheeto-trnd/
 
 
 ### Module-usage
 
 ```js
-alexandria.summarizeAndRead("http://www.cnn.com/2017/02/07/us/harambe-cheeto-trnd/")
+readThis.summarizeAndRead("http://www.cnn.com/2017/02/07/us/harambe-cheeto-trnd/")
 ```
 
 
