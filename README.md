@@ -4,7 +4,7 @@
 
 
 ## Overview
-  Summarizes and reads articles to you via the command line
+Summarizes and reads articles to you via the command line
 
 ## Installation
 
@@ -15,6 +15,9 @@ npm install -g alexandria
 alexandria "url"
 
 ### Module-usage:
+
+While alexandria is primarily a command line package, you can still use it as
+a module.
 
 Install the package with:
 
@@ -29,10 +32,10 @@ let alexandria = new Alexandria()
 ```
 
 ```js
-summarizeAndRead(url, optional boolean)
+alexandria.summarizeAndRead(url, optional boolean)
 ```
 
-only requires a url. You can pass an optional boolean of true
+summarizeAndRead only requires a url. You can pass an optional boolean of true
 to it as a second parameter to have it print your summary to the console while it's being read. When using alexandria from the command line the boolean is passed internally to allow printing to the console.
 
 # Example
