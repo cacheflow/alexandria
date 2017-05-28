@@ -6,6 +6,17 @@
   "bin": {
     "alexandria": "./cli.js"
   },
+  "keywords": [
+    "summary",
+    "text",
+    "read articles",
+    "read",
+    "speech",
+    "summarizing",
+    "articles",
+    "command-line",
+    "command line"
+  ],
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-polyfill": "^6.23.0",
