@@ -1,4 +1,4 @@
-# Read This
+# read-this
 
 Summarizes and reads articles to you via the command line
 
