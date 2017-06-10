@@ -1,10 +1,14 @@
 {
   "name": "read-this",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
   "bin": {
     "read-this": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cacheflow/read-this.git"
   },
   "keywords": [
     "summary",
